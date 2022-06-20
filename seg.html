@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>DJ CAL EVENTOS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="icon" href="cal.jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .whatsapp-link {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 1px 1px 2px #888;
+            z-index: 1000;
+        }
+
+        .fa-whatsapp {
+            margin-top: 15px;
+        }
+
+        .links {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            display: flex;
+        }
+
+        .links label {
+            padding: 10px 0;
+            flex-grow: 1;
+            cursor: pointer;
+            transition: all .4s;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 100%;
+            color: rgb(255, 255, 255);
+        }
+
+        .links label:hover {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .scroll input {
+            display: none;
+        }
+
+        .bloco {
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        #biografia {
+            background-image: url(Mesa-de-Som-em-Festa-no-Clube-dos-Ingleses-em-Santos-1024x682.jpg);
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+
+        }
+
+        #serviços {
+            background:  linear-gradient(200deg,#0051ff, #000000,#b700ff);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #equipamentos {
+            background-color: rgb(0, 0, 0);
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .elemento {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            padding: 1.2px;
+            margin: 1.2px;
+        }
+
+        p {
+            background-color: rgb(255, 255, 255);
+            font-size: 18px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: rgb(255, 255, 255);
+            font-size: 26px;
+            justify-content: center;
+            text-align: center;
+        }
+        h3{
+            font-size: 17px;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        #contato { 
+            background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .scroll {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sections {
+            transition: all .4s;
+        }
+
+        #rd_serviços:checked~.sections {
+            margin-top: -100vh;
+        }
+
+        #rd_equipamentos:checked~.sections {
+            margin-top: -200vh;
+        }
+
+        #rd_contato:checked~.sections {
+            margin-top: -300vh;
+        }
+
+        #textocripto {
+            justify-content: center;
+            text-align: justify;
+            background-color: rgba(255, 255, 255, 0.137);
+            margin-top: 0%;
+            font-size: 33px;
+            color: rgb(0, 0, 0);
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 2%;
+        }
+        .principal .links a{
+    color: rgb(255, 255, 255);
+    padding: 10px 18px;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    margin-top: 20px;
+    transition: 200ms;
+}
+ 
+.principal .links a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+        
+    </style>
+</head>
+
+<body>
+    <a class="whatsapp-link" href="https://api.whatsapp.com/send?phone=5511985251429" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <nav class="links">
+            <label for="rd_biografia">Biografia</label>
+            <label for="rd_serviços">Serviços</label>
+            <label for="rd_equipamentos">Equipamentos</label>
+            <label for="rd_contato">Contato</label>
+        </nav>
+    </header>
+    <main>
+
+        <div class="scroll">
+            <input type="radio" name="grupo" id="rd_biografia" checked="true">
+            <input type="radio" name="grupo" id="rd_serviços">
+            <input type="radio" name="grupo" id="rd_equipamentos">
+            <input type="radio" name="grupo" id="rd_contato">
+
+            <section class="sections">
+                <section class="bloco" id="biografia">
+                    <div>
+                        <h1 id="textocripto">
+                           
+                            Olá, Sou o Dj Cal, são 14 anos no mercado e muitos eventos realizados, com muita
+                            qualidade, comprometimento, humildade e responsabilidade, sempre em busca de aprimoramento e
+                            das últimas tendências. Serviços de Dj, sonorização, iluminação de pista, efeitos especiais,
+                            luzes decorativas entre outros serviços que darão um toque especial ao seu evento.
+                            <br>
+                            <br>
+                            Sempre com muito amor, alegria e feeling musical, animando todos os convidados do evento, de
+                            forma única e exclusiva.
+                            <br>
+                            <br>
+                            O meu maior diferecial é o repertório personalizado, onde nossos clientes nos especifica o
+                            que deseja, e montamos todo set conforme a solicitação. Trabalhamos com todo tipo de
+                            repertorio tudo para seu evento ficar mais especial.
+
+                        </h1>
+                    </div>
+                </section>
+
+                <section class="bloco" id="serviços">
+                    <link rel="stylesheet" href="">
+                    <div>
+                        <center>
+                            
+                            <ul>
+                             
+                                <li>
+                                    <img src="casa.jpeg" width="250" height="200">
+                                    <p>Festa de Casamento</p>
+
+                                </li>
+
+                                <li>
+                                    <img src="temafesta.jpeg" width="250" height="200">
+                                    <p>Festa Hollywood</p>
+
+                                </li>
+                                <li>
+                                    <img src="18anos.jpeg" width="250" height="200">
+                                    <p>Festa de 18 anos </p>
+
+                                </li>
+                                <li>
+                                    <img src="debutante.jpeg" width="250" height="200">
+                                    <p>Festa Debutante</p>
+
+                                </li>
+                                <li>
+                                    <img src="medo.jpeg" width="250" height="200">
+                                    <p>Festa Halloween</p>
+
+                                </li>
+
+                            </ul>
+                            <ul>
+                                <video controls width="250" height="200">
+                                    <source src="anos80.mp4">
+                                </video>
+
+                                <video controls width="250" height="200">
+                                    <source src="louca.mp4">
+                                </video>
+
+                                <video controls width="250" height="200">
+                                    <source src="equipamento.mp4">
+                                </video>
+
+                                <video controls width="250" height="200">
+                                    <source src="branquelas.mp4">
+                                </video>
+
+                                <video controls width="250" height="200">
+                                    <source src="ddvideo.mp4">
+                                </video>
+
+                            </ul>
+                            <h1>Alguns vídeos e fotos de eventos realizados.</h1>
+
+                    </div>
+
+                </section>
+
+                </center>
+                <section class="bloco" id="equipamentos">
+                    <div>
+                        <center>
+                            <ul>
+                                <li>
+                                    <img src="bola.jpg" width="230" height="170">
+                                    <p>Bola de Cristal Multicores</p>
+                                    <p> R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="sputinik.jpg" width="230" height="170">
+                                    <p>Sputnik</p>
+                                    <p>R$ 50,00 cada estrela</p>
+                                </li>
+                                <li>
+                                    <img src="caixa-jbl-eon-615-bivolt-1000w-eon615-equalizador-digital-1504266476.jpg"
+                                        width="230" height="170">
+                                    <p>Caixa JBL</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="gelo-seco-casamento.jpg" width="230" height="170">
+                                    <p>Fumaça Rasteira</p>
+                                    <p>R$ 400,00</p>
+                                  
+                                </li>
+                                <li>
+                                    <img src="laser.webp" width="230" height="170">
+                                    <p>Laser Verde e Vermelho</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="azul.jpg" width="230" height="170">
+                                    <p>Laser Azul</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="fuma.webp" width="230" height="170">
+                                    <p>Máquina de Fumaça</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="tap.jpg" width="230" height="170">
+                                    <p>Tapete Xadrez</p>
+                                    <p>R$ 150,00</p>
+                                </li>
+                                <li>
+                                    <img src="moving.webp" width="230" height="170">
+                                    <p>Moving Led</p>
+                                    <p>R$ 250,00</p>
+                                </li>
+                                <li>
+                                    <img src="ledled.jpg" width="230" height="170">
+                                    <p>Sequencial Led</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="controladora.jpg" width="230" height="170">
+                                    <p>Controladora Hércules</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="mesa.webp" width="230" height="170">
+                                    <p>Mesa de Som</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="nootebok.webp" width="295" height="170">
+                                    <p>Notebook Acer I5</p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                             
+                                <li>
+                                    <img src="refletor.jpg" width="295" height="170">
+                                    <p>Refletor Led </p>
+                                    <p>R$ 0,00</p>
+                                </li>
+                                <li>
+                                    <img src="kit-tela150x150-projetor.jpg" width="295" height="170">
+                                    <p>Projetor e Telão</p>
+                                    <p>R$ 400,00</p>
+                                </li>
+                                <li>
+                                    <img src="subwoofer.webp" width="295" height="170">
+                                    <p>Subwoofer</p>
+                                    <p>R$ 300,00</p>
+                                </li>
+                                <h3>*Imagens Ilustrativas* <br>
+                                     condizentes com a real</h3>
+                              
+
+                            </ul>
+                    </div>
+                </section>
+                </center>
+
+
+
+                <section class="bloco" id="contato">
+<center>   
+    <h1>Contato Dj Cal</h1>
+                    <ul>
+                        <li>
+                            <img src="whatsapp.png" width="200" height="200">
+                           <h1> <a href="https://api.whatsapp.com/send?phone=5511985251429"> Whatsapp </a></h1>
+                           
+                        </li>
+                        <li>
+                            <img src="face.png" width="200" height="200">
+                          <h1><a href="https://www.facebook.com/djcaleventos"> Facebook </a></h1>
+                            
+                        </li>
+                        <li>
+                            <img src="insta.png" width="200" height="200">
+                            <h1> <a href="https://instagram.com/dj_cal_eventos?igshid=YmMyMTA2M2Y">Instagram </a></h1>
+                           
+                        </li>
+                           <li>
+                            <img src="email.png" width="200" height="200">
+                            <h1> <a href="mailto:Dj.cal.eventos@gmail.com">Email </a></h1>
+                           
+                        </li>
+                       
+
+                    </ul>
+                    <h1>Contato Programador do Site</h1>
+                    <ul>
+                        <li>
+                            <img src="whatsapp.png" width="100" height="100">
+                           <h1> <a href="https://api.whatsapp.com/send?phone=5511991590894"> Whatsapp </a></h1>
+                        </li>
+                           <li>
+                            <img src="email.png" width="100" height="100">
+                            <h1> <a href="mailto:jualvaguiar2020@gmail.com">Email </a></h1>    
+                        </li>
+                    </ul>
+
+    </center>        
+</body>
+
+</html>
